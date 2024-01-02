@@ -3,6 +3,8 @@ public class UniqueChars {
     public static void main(String[] args) {  
         String str = args[0];
         System.out.println(uniqueChars(str));
+                System.out.println(uniqueChars("yael played the yokelele"));
+
     }
 
     /**
@@ -11,7 +13,22 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        String check = "";
+        int count = 0;
+        for (int i = 0; i < s.length() ; i++) {
+            for (int j = 0; j < check.length() ; j++) {
+                if(s.charAt(i) != ' ' && s.charAt(i) != check.charAt(j)){
+                    count++;
+                }
+            }
+            if(count == check.length()){
+                check += s.charAt(i);
+            }
+            if(s.charAt(i) == ' '){
+                check += ' ';
+            }
+            count = 0;
+        }
+            return check;
     }
 }

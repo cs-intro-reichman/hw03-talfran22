@@ -44,18 +44,14 @@ public class Calendar0 {
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
 	public static int nDaysInMonth(int month, int year) {
-		if((month == 2) && isLeapYear(year) == true)
-		{
-			return 28;
-		}
-		if((month == 2) && isLeapYear(year) == false)
-		{
-			return 29;
-		}
-		if((month == 4) || (month == 6) || (month == 9) || (month == 11)){
+		if(month == 4 || month == 6 || month == 9 || month == 11)
 			return 30;
-		} 
 		else{
+			if (month == 2) {
+				if (isLeapYear(year)) 
+					return 29;	
+				return 28;
+			}	
 			return 31;
 		}
 	}

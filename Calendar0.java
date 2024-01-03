@@ -17,13 +17,14 @@ public class Calendar0 {
 		if (isLeapYear(year)) {
 			commonOrLeap = "leap";
 		}
-		System.out.println(year + " is a " + commonOrLeap + " year");  
+		System.out.println(year + " is a " + commonOrLeap + " year"); 
+
 	}
 
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
 		for(int i = 1; i <= 12; i++){
-			System.out.println(nDaysInMonth(i, year));
+			System.out.println("Month " + i + " has " + nDaysInMonth(i, year) + " days");
 		}
 	}
 

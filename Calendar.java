@@ -1,6 +1,3 @@
-/** 
- * Prints the calendars of all the years in the 20th century.
- */
 public class Calendar{	
     // Starting the calendar on 1/1/1900
 	static int dayOfMonth = 1;   
@@ -8,13 +5,9 @@ public class Calendar{
 	static int year = 1900;
 	static int dayOfWeek = 2;     // 1.1.1900 was a Monday
 	static int nDaysInMonth = 31; // Number of days in January
-
-	
-
 	public static void main(String args[]) {
 		int givenyear = Integer.parseInt(args[0]);
 	 	while (year < 2025) {
-	 		//// Write the body of the while 
 	 		if(year == givenyear){
 	 			while(year == givenyear)
 	 			{	
